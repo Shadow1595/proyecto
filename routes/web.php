@@ -22,3 +22,15 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+Route::get('/clientes', function () {
+    return view('clientes');
+})->middleware(['auth', 'verified'])->name('clientes');
+
+Route::get('/empleados', function () {
+    return view('empleados');
+})->middleware(['auth', 'verified'])->name('empleados');
+
+Route::get('/ventas', function () {
+    return view('ventas');
+})->middleware(['auth', 'verified'])->name('ventas');
